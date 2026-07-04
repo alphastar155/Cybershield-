@@ -1,0 +1,120 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HOME | CyberShield Security</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #0a0f1c; color: white; }
+        #header { width: 100%; min-height: 200px; display: flex; align-items: center; justify-content: space-between; padding: 0 40px; box-sizing: border-box; border-bottom: 2px dashed #00ffcc; background: #111a2b; position: relative; }
+        #logo img { width: 140px; height: 140px; border-radius: 50%; border: 4px solid #00ffcc; object-fit: cover; }
+        #header-center { text-align: center; flex-grow: 1; }
+        #header-center h1 { margin: 0; color: #00ffcc; font-size: 3rem; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,255,204,0.3); }
+        #header-center h3 { margin: 5px 0 0; font-weight: 300; color: #fff; font-style: italic; }
+        #email a { color: #00ffcc; text-decoration: none; font-weight: bold; border: 1px solid #00ffcc; padding: 8px 15px; border-radius: 5px; transition: 0.3s; }
+        #email a:hover { background: #00ffcc; color: #111a2b; }
+        #menu { position: absolute; bottom: -22px; left: 0; right: 0; text-align: center; z-index: 10; }
+        a.button { display: inline-block; padding: 10px 25px; margin: 0 5px; border-radius: 25px; text-decoration: none; color: #0a0f1c; background-color: #00ffcc; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,255,204,0.3); }
+        a.button:hover { background-color: #00e6b8; transform: translateY(-2px); }
+        .body1 { padding: 60px 20px 40px; max-width: 900px; margin: auto; }
+        .section { margin-bottom: 50px; }
+        .section h2 { color: #00ffcc; border-left: 4px solid #00ffcc; padding-left: 15px; font-size: 1.8rem; margin-bottom: 20px; }
+        .card { background: #111a2b; padding: 25px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); line-height: 1.6; border: 1px solid rgba(0,255,204,0.1); }
+        .card h4 { color: #00ffcc; margin: 20px 0 5px; }
+        .card h4:first-child { margin-top: 0; }
+        footer { display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background: #111a2b; border-top: 2px dashed #00ffcc; color: #00ffcc; margin-top: 50px; }
+        footer a.top-link { margin-bottom: 20px; color: #00ffcc; text-decoration: none; font-size: 14px; }
+        ul.pagination { list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; }
+        ul.pagination li a { color: #00ffcc; padding: 8px 16px; text-decoration: none; border: 1px solid #00ffcc; margin: 0 4px; transition: 0.3s; }
+        ul.pagination li a:hover, ul.pagination li a.active { background-color: #00ffcc; color: #111a2b; }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <div id="logo">
+        <img src="{% static 'main/images/cybersheild.jpg' %}" alt="Logo">
+    </div>
+    <div id="header-center">
+        <h1>CYBERSHEILD</h1>
+        <h3>The art of cyber-defence</h3>
+    </div>
+    <div id="email">
+        <a href="mailto:cybersheild@gmail.com">EMAIL US</a>
+    </div>
+    <div id="menu">
+        <a href="{% url 'home' %}" class="button">HOME</a>
+        <a href="{% url 'about' %}" class="button">ABOUT US</a>
+        <a href="{% url 'services' %}" class="button">SERVICES</a>
+        <a href="{% url 'register' %}" class="button">REGISTER</a>
+        <a href="{% url 'contact' %}" class="button">CONTACT</a>
+    </div>
+</div>
+
+<div class="body1">
+    <div class="section">
+        <h2>CyberShield Security</h2>
+        <div class="card">
+            <p>CyberShield Security refers to a system, platform, or concept focused on protecting digital assets, networks, and data from cyber threats such as hacking, malware, phishing, and unauthorized access. It acts as a "shield" that defends users, organizations, and systems in the digital world.</p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Key Features</h2>
+        <div class="card">
+            <h4>1. Threat Detection</h4>
+            Identifies suspicious activities in real-time using advanced AI and machine learning.
+            <h4>2. Data Protection</h4>
+            Encrypts sensitive information and prevents data leaks and breaches.
+            <h4>3. Network Security</h4>
+            Monitors network traffic and blocks unauthorized access points.
+            <h4>4. Malware Protection</h4>
+            Detects and removes harmful software like viruses and ransomware.
+            <h4>5. User Authentication</h4>
+            Ensures only authorized users can access systems through MFA and biometrics.
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Importance</h2>
+        <div class="card">
+            <ul>
+                <li>Protects personal and business information.</li>
+                <li>Prevents financial loss due to cyber attacks.</li>
+                <li>Maintains system integrity and reliability.</li>
+                <li>Builds trust with users and customers.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Common Threats Prevented</h2>
+        <div class="card">
+            Phishing attacks • Ransomware • Spyware • Identity theft • Data breaches
+        </div>
+    </div>
+
+    <div class="section">
+        <h2>Conclusion</h2>
+        <div class="card">
+            <p>CyberShield Security plays a vital role in today's digital world by providing strong protection against cyber threats. As technology continues to grow, the need for advanced cybersecurity solutions like CyberShield becomes even more important to ensure safety, privacy, and trust online.</p>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <a href="#" class="top-link">▲ JUMP TO TOP</a>
+    <ul class="pagination">
+        <li><a href="#">&laquo;</a></li>
+        <li><a href="{% url 'home' %}" class="active">1</a></li>
+        <li><a href="{% url 'about' %}">2</a></li>
+        <li><a href="{% url 'services' %}">3</a></li>
+        <li><a href="{% url 'register' %}">4</a></li>
+        <li><a href="{% url 'contact' %}">5</a></li>
+        <li><a href="{% url 'about' %}">&raquo;</a></li>
+    </ul>
+    <p>&copy; 2026 CyberShield Security. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

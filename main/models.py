@@ -1,0 +1,19 @@
+from django.db import models
+
+class ContactMessage(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField()
+    message = models.TextField()
+    submitted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.name} - {self.email}"
+
+class ServiceRegistration(models.Model):
+    full_name = models.CharField(max_length=150)
+    email = models.EmailField()
+    service = models.CharField(max_length=100)
+    registered_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.full_name} - {self.service}"

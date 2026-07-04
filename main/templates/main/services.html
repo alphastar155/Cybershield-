@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OUR SERVICES | CyberShield Security</title>
+    <style>
+        body { margin: 0; font-family: 'Segoe UI', Arial, sans-serif; background-color: #0a0f1c; color: white; }
+        #header { width: 100%; min-height: 200px; display: flex; align-items: center; justify-content: center; padding: 0 40px; box-sizing: border-box; border-bottom: 2px dashed #00ffcc; background: #111a2b; position: relative; }
+        #header-center { text-align: center; }
+        #header-center h1 { margin: 0; color: #00ffcc; font-size: 3rem; letter-spacing: 2px; text-shadow: 2px 2px 10px rgba(0,255,204,0.3); }
+        #header-center p { margin: 5px 0 0; color: #fff; font-style: italic; }
+        #menu { position: absolute; bottom: -22px; left: 0; right: 0; text-align: center; z-index: 10; }
+        a.button { display: inline-block; padding: 10px 25px; margin: 0 5px; border-radius: 25px; text-decoration: none; color: #0a0f1c; background-color: #00ffcc; font-weight: bold; font-size: 14px; transition: 0.3s; box-shadow: 0 4px 15px rgba(0,255,204,0.3); }
+        a.button:hover { background-color: #00e6b8; transform: translateY(-2px); }
+        .container { padding: 60px 20px 40px; max-width: 1100px; margin: auto; }
+        .section h2 { color: #00ffcc; border-left: 4px solid #00ffcc; padding-left: 15px; font-size: 1.8rem; margin-bottom: 20px; }
+        .card { background: #111a2b; padding: 20px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.3); border: 1px solid rgba(0,255,204,0.1); }
+        table { width: 100%; border-collapse: separate; border-spacing: 15px; }
+        td { border: 1px dashed #00ffcc; background: rgba(10,15,28,0.5); border-radius: 15px; padding: 15px; color: #00ffcc; font-weight: bold; text-transform: uppercase; letter-spacing: 1px; transition: 0.3s; }
+        td:hover { background: rgba(0,255,204,0.05); border-style: solid; }
+        img { max-width: 100%; height: auto; border-radius: 10px; display: block; margin: 0 auto 10px; filter: grayscale(30%); transition: 0.3s; }
+        img:hover { filter: grayscale(0%); }
+        footer { display: flex; flex-direction: column; align-items: center; padding: 40px 20px; background: #111a2b; border-top: 2px dashed #00ffcc; color: #00ffcc; margin-top: 50px; }
+        footer a.top-link { margin-bottom: 20px; color: #00ffcc; text-decoration: none; font-size: 14px; }
+        ul.pagination { list-style: none; padding: 0; margin: 0 0 20px 0; display: flex; }
+        ul.pagination li a { color: #00ffcc; padding: 8px 16px; text-decoration: none; border: 1px solid #00ffcc; margin: 0 4px; transition: 0.3s; }
+        ul.pagination li a:hover, ul.pagination li a.active { background-color: #00ffcc; color: #111a2b; }
+    </style>
+</head>
+<body>
+
+<div id="header">
+    <div id="header-center">
+        <h1>CYBERSHEILD SECURITY</h1>
+        <p>Protecting Your Digital World</p>
+    </div>
+    <div id="menu">
+        <a href="{% url 'home' %}" class="button">HOME</a>
+        <a href="{% url 'about' %}" class="button">ABOUT US</a>
+        <a href="{% url 'services' %}" class="button">OUR SERVICES</a>
+        <a href="{% url 'register' %}" class="button">REGISTER</a>
+        <a href="{% url 'contact' %}" class="button">CONTACT US</a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="section">
+        <h2>DEFENSE CAPABILITIES</h2>
+        <div class="card">
+            <table>
+                <tr>
+                    <td colspan="2" align="center">
+                        <img src="{% static 'main/images/hack.jpeg' %}" alt="Ethical Hacking" style="width:100%; max-height:400px; object-fit:cover;">
+                        Ethical Hacking & Penetration Testing
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="{% static 'main/images/network.jpeg' %}" alt="Network Security">
+                        Network Security
+                    </td>
+                    <td align="center">
+                        <img src="{% static 'main/images/data.jpeg' %}" alt="Data Protection">
+                        Data Protection
+                    </td>
+                </tr>
+                <tr>
+                    <td align="center">
+                        <img src="{% static 'main/images/security.jpeg' %}" alt="Security Monitoring">
+                        Security Monitoring
+                    </td>
+                    <td align="center">
+                        <img src="{% static 'main/images/training.jpeg' %}" alt="Cybersecurity Training">
+                        Cybersecurity Training
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <a href="#" class="top-link">▲ JUMP TO TOP</a>
+    <ul class="pagination">
+        <li><a href="{% url 'about' %}">&laquo;</a></li>
+        <li><a href="{% url 'home' %}">1</a></li>
+        <li><a href="{% url 'about' %}">2</a></li>
+        <li><a href="{% url 'services' %}" class="active">3</a></li>
+        <li><a href="{% url 'register' %}">4</a></li>
+        <li><a href="{% url 'contact' %}">5</a></li>
+        <li><a href="{% url 'register' %}">&raquo;</a></li>
+    </ul>
+    <p>&copy; 2026 CyberShield Security. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

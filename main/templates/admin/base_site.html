@@ -1,0 +1,40 @@
+{% extends "admin/base.html" %}
+
+{% block title %}CyberShield Security Admin{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">
+    <a href="{% url 'admin:index' %}">🛡️ CyberShield Security Admin</a>
+</h1>
+{% endblock %}
+
+{% block extrastyle %}
+{{ block.super }}
+<style>
+    .body {border-radius: 25px}
+    #header { background: #111a2b !important; border-bottom: 2px solid #00ffcc !important; }
+    #header a, #header a:link, #header a:visited { color: #00ffcc !important; }
+    #site-name a { color: #00ffcc !important; font-size: 1.4rem !important; letter-spacing: 2px !important; }
+    #user-tools, #user-tools a { color: #00ffcc !important; }
+    body, html { background: #0a0f1c !important; color: #ffffff !important; }
+    #nav-sidebar { background: #111a2b !important; }
+    .module caption, .module h2 { background: #111a2b !important; color: #00ffcc !important; border-left: 4px solid #00ffcc !important; }
+    #content { background: #0a0f1c !important; color: white !important; }
+    #content h1 { color: #00ffcc !important; border-left: 4px solid #00ffcc !important; padding-left: 15px !important; }
+    div.breadcrumbs { background: #111a2b !important; color: #00ffcc !important; }
+    div.breadcrumbs a { color: #00ffcc !important; }
+    #result_list thead th { background: #111a2b !important; color: #00ffcc !important; border-bottom: 1px solid #00ffcc !important; }
+    #result_list tr:hover { background: rgba(0,255,204,0.07) !important; }
+    #result_list td, #result_list th { color: #ffffff !important; }
+    a:link, a:visited { color: #00ffcc !important; }
+    .button, input[type=submit], input[type=button], .submit-row input { background: #00ffcc !important; color: #0a0f1c !important; border: none !important; border-radius: 5px !important; font-weight: bold !important; }
+    .deletelink, a.deletelink { background: #cc0000 !important; color: white !important; }
+    input, textarea, select { background: #111a2b !important; color: white !important; border: 1px solid rgba(0,255,204,0.3) !important; border-radius: 5px !important; }
+    input:focus, textarea:focus { border-color: #00ffcc !important; outline: none !important; }
+    .module { background: #111a2b !important; border: 1px solid rgba(0,255,204,0.1) !important; border-radius: 10px !important; }
+    #footer { background: #111a2b !important; border-top: 2px dashed #00ffcc !important; color: #00ffcc !important; }
+    #changelist-filter { background: #111a2b !important; }
+    #changelist-filter h2 { color: #00ffcc !important; }
+    #searchbar { background: #111a2b !important; border: 1px solid #00ffcc !important; color: white !important; }
+</style>
+{% endblock %}
